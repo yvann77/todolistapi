@@ -4,18 +4,18 @@ api_description = """
 
 This is a simple API for managing a task list using Firebase as the database.
 
-## Endpoints
-
-- `/todos`: List all tasks and add a new task.
-- `/todos/{id}`: Retrieve, update, or delete a specific task.
-
 ## Authentication
 
-This API does not require authentication.
+This API uses Firebase Authentication for user registration and authentication.
 
-## Error Handling
+### Registration
 
-- If a task is not found, a 404 error will be returned.
-- If there is an error with the request data, a 400 error will be returned.
+To register a new user, send a POST request to the `/register` endpoint with the following JSON payload:
+
+```json
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
 
 """
