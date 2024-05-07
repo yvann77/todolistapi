@@ -8,7 +8,7 @@ from documentations.tags import tags_metadata
 
 # Import des routers
 import routers.router_todo
-
+import routers.router_auth
 
 #Lancement de l'API
 app = FastAPI(
@@ -19,6 +19,7 @@ app = FastAPI(
 
 # Routers dédiés
 app.include_router(routers.router_todo.router)
+app.include_router(routers.router_auth.router)
 
 @app.get("/", include_in_schema=False)
 async def redirect_to_docs(request: Request):
