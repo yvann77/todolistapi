@@ -4,12 +4,16 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from firebase_admin import auth, credentials
 import firebase_admin
 import requests
+import os
 from pydantic import BaseModel
-from dotenv import dotenv_values
+from dotenv import load_dotenv
 from jose import jwt
 from datetime import datetime, timedelta
 
-config = dotenv_values("todolist.env")
+load_dotenv()
+config = {
+    "FIREBASE_SERVICE_ACCOUNT_KEY" : os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY")
+}
 
 cred = credentials.Certificate(json.loads(config['FIREBASE_SERVICE_ACCOUNT_KEY']))
 
