@@ -1,0 +1,11 @@
+coverage:
+  status:
+    project:
+      default:
+        # Basic threshold for the entire project
+        target: 85%
+        threshold: 1%
+    patch:
+      default:
+        # Ensure each patch to the codebase meets the coverage standard
+        target: 85%
