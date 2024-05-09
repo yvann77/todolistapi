@@ -12,7 +12,8 @@ from datetime import datetime, timedelta
 
 load_dotenv()
 config = {
-    "FIREBASE_SERVICE_ACCOUNT_KEY" : os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY")
+    "FIREBASE_SERVICE_ACCOUNT_KEY" : os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY"),
+    "SECRET_KEY" : os.getenv("SECRET_KEY")
 }
 
 cred = credentials.Certificate(json.loads(config['FIREBASE_SERVICE_ACCOUNT_KEY']))
