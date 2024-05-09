@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 load_dotenv()
 config = {
     "FIREBASE_SERVICE_ACCOUNT_KEY" : os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY"),
+    "FIREBASE_CONFIG" : os.getenv("FIREBASE_CONFIG"),
     "SECRET_KEY" : os.getenv("SECRET_KEY")
 }
 
